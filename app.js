@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let isPlaying = false;
     let loopState = 0;
     let hasLoopedOnce = false;
+    let isTypingInSearch = false;
+
+    searchInput.addEventListener('focus', function() {
+        isTypingInSearch = true;
+    });
+
+    searchInput.addEventListener('blur', function() {
+        isTypingInSearch = false;
+    });
     
     themeToggle.addEventListener('click', function() {
         musicPlayer.classList.toggle('dark-mode');
@@ -37,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     searchBtn.addEventListener('click', searchSong);
     searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') searchSong();
+        if (e.key === 'Enter') {
+            searchSong();
+        }
     });
     
     loopBtn.addEventListener('click', function() {
@@ -160,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     playPauseBtn.addEventListener('click', togglePlayPause);
     
     document.addEventListener('keydown', function(e) {
-        if (e.code === 'Space') {
+        if (e.code === 'Space' && !isTypingInSearch) {
             e.preventDefault();
             togglePlayPause();
         }
