@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const songArtist = document.getElementById('song-artist');
     const progressBar = document.getElementById('progress-bar');
     const progress = document.getElementById('progress');
+    const waveProgress = document.getElementById('wave-progress');
+    const currentTimeDisplay = document.getElementById('current-time');
+    const durationDisplay = document.getElementById('duration');
     const playPauseBtn = document.getElementById('play-pause-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
-    const volumeSlider = document.getElementById('volume-slider');
     const audioPlayer = document.getElementById('audio-player');
     const unavailableMessage = document.getElementById('unavailable-message');
     const loopBtn = document.getElementById('loop-btn');
@@ -107,6 +109,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return textArea.value;
     }
     
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+    
     function playSong(song) {
         const downloads = song.downloadUrl || [];
         let audioUrl = null;
@@ -149,10 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updatePlayPauseIcon() {
         if (isPlaying) {
             playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            playPauseBtn.querySelector('i').classList.add('pulse-animation');
         } else {
             playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-            playPauseBtn.querySelector('i').classList.remove('pulse-animation');
         }
     }
     
@@ -194,17 +200,20 @@ document.addEventListener('DOMContentLoaded', function() {
     audioPlayer.addEventListener('timeupdate', function() {
         const currentTime = audioPlayer.currentTime;
         const duration = audioPlayer.duration || 1;
-        progress.style.width = `${(currentTime / duration) * 100}%`;
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+        waveProgress.style.width = `${progressPercent}%`;
+        currentTimeDisplay.textContent = formatTime(currentTime);
+        if (!isNaN(duration)) {
+            durationDisplay.textContent = formatTime(duration);
+        }
     });
     
     progressBar.addEventListener('click', function(e) {
         if (audioPlayer.src) {
-            audioPlayer.currentTime = (e.offsetX / this.clientWidth) * audioPlayer.duration;
+            const clickPosition = e.offsetX / this.clientWidth;
+            audioPlayer.currentTime = clickPosition * audioPlayer.duration;
         }
-    });
-    
-    volumeSlider.addEventListener('input', function() {
-        audioPlayer.volume = this.value / 100;
     });
     
     function updateUnavailableMessage(message) {

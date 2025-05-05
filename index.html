@@ -28,8 +28,15 @@
       </div>
     </div>
     <div id="player">
-      <div id="progress-bar">
-        <div id="progress"></div>
+      <div id="progress-container">
+        <div id="progress-bar">
+          <div id="progress"></div>
+          <div id="wave-progress"></div>
+        </div>
+        <div id="time-display">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
       </div>
       <div id="player-options">
         <button id="loop-btn"><i class="fas fa-repeat"></i></button>
@@ -38,11 +45,6 @@
         <button id="prev-btn"><i class="fas fa-backward-step"></i></button>
         <button id="play-pause-btn"><i class="fas fa-play"></i></button>
         <button id="next-btn"><i class="fas fa-forward-step"></i></button>
-      </div>
-      <div id="volume-control">
-        <i class="fas fa-volume-low"></i>
-        <input type="range" id="volume-slider" min="0" max="100" step="1" value="100">
-        <i class="fas fa-volume-high"></i>
       </div>
     </div>
     <div id="unavailable-message">
