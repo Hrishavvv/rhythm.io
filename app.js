@@ -24,6 +24,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let loopState = 0;
     let hasLoopedOnce = false;
     let isTypingInSearch = false;
+    let customSongs = [];
+
+    function loadCustomSongs() {
+        const script = document.createElement('script');
+        script.src = 'custom.js';
+        script.onload = function() {
+            customSongs = window.customSongs || [];
+        };
+        document.head.appendChild(script);
+    }
+    loadCustomSongs();
 
     searchInput.addEventListener('focus', function() {
         isTypingInSearch = true;
@@ -85,6 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
         updateUnavailableMessage(`Searching for "${query}"...`);
         
+        const matchedCustomSongs = customSongs.filter(song => 
+            song.name.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (matchedCustomSongs.length > 0) {
+            songs = matchedCustomSongs;
+            currentSongIndex = 0;
+            playSong(songs[currentSongIndex]);
+            return;
+        }
+        
         try {
             const response = await fetch(`https://saavn.dev/api/search/songs?query=${encodeURIComponent(query)}`);
             const data = await response.json();
@@ -123,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         for (const quality of qualityPriority) {
             const cdn = downloads.find(dl => 
-                dl.quality === quality && dl.url.includes("aac.saavncdn.com")
+                dl.quality === quality && (dl.url.includes("aac.saavncdn.com") || dl.url.startsWith("http"))
             );
             if (cdn) {
                 audioUrl = cdn.url;
