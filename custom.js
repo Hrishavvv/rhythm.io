@@ -1,5 +1,15 @@
 window.customSongs = [
     {
+        name: "Tere Naina",
+        artists: { primary: [{ name: "Shafqat Amanat Ali" }] },
+        downloadUrl: [
+            { quality: "160kbps", url: "https://raag.fm/files/mp3/128/Hindi/1446135/Tere%20Naina%20(My%20Name%20Is%20Khan)%20-%20(Raag.Fm).mp3" }
+        ],
+        image: [
+            { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/DwPKOkBKqV/PKOxQAGa3q/size_l.webp" }
+        ]
+    },
+    {
         name: "Shape of You",
         artists: { primary: [{ name: "Ed Sheeran" }] },
         downloadUrl: [
