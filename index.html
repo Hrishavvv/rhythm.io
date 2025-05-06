@@ -17,43 +17,42 @@
       <input type="text" id="search-input" placeholder="Search for a song...">
       <button id="search-btn"><i class="fas fa-search"></i></button>
     </div>
-    <div id="song-info">
-      <div id="album-art-container">
-        <img id="album-art" src="asth.gif" alt="Album Art">
-        <div id="video-container"></div>
-      </div>
-      <div id="song-details">
-        <h1 id="song-title">Take a chill pill!</h1>
-        <p id="song-artist"></p>
-      </div>
-    </div>
-    <div id="player">
-      <div id="progress-container">
-        <div id="progress-bar">
-          <div id="progress"></div>
-          <div id="wave-progress"></div>
+    <div id="content-container">
+      <div id="song-info">
+        <div id="album-art-container">
+          <img id="album-art" src="asth.gif" alt="Album Art">
+          <div id="video-container"></div>
         </div>
-        <div id="time-display">
-          <span id="current-time">0:00</span>
-          <span id="duration">0:00</span>
+        <div id="song-details">
+          <h1 id="song-title">Take a chill pill!</h1>
+          <p id="song-artist"></p>
         </div>
       </div>
-      <div id="player-options">
-        <button id="loop-btn"><i class="fas fa-repeat"></i></button>
-      </div>
-      <div id="controls">
-        <button id="prev-btn"><i class="fas fa-backward-step"></i></button>
-        <button id="play-pause-btn"><i class="fas fa-play"></i></button>
-        <button id="next-btn"><i class="fas fa-forward-step"></i></button>
+      <div id="player">
+        <div id="progress-container">
+          <div id="progress-bar">
+            <div id="progress"></div>
+            <div id="wave-progress"></div>
+          </div>
+          <div id="time-display">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+        <div id="player-options">
+          <button id="loop-btn"><i class="fas fa-repeat"></i></button>
+        </div>
+        <div id="controls">
+          <button id="prev-btn"><i class="fas fa-backward-step"></i></button>
+          <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+          <button id="next-btn"><i class="fas fa-forward-step"></i></button>
+        </div>
       </div>
     </div>
     <div id="unavailable-message">
       <code>The Useless Co.™</code>
     </div>
   </div>
-  <footer>
-    <p>Made w/❤️ by Hrishav</p>
-  </footer>
   <audio id="audio-player" hidden></audio>
   <script src="app.js"></script>
 </body>
