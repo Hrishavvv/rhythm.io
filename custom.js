@@ -53,7 +53,7 @@ window.customSongs = [
     },
     {
         name: "Unravel",
-        artists: { primary: [{ name: "TK from ling tosite sigure" }] },
+        artists: { primary: [{ name: "TK from Ling Tosite Sigure" }] },
         downloadUrl: [
             { quality: "320kbps", url: "https://streams.gaana.com/songs/23/3223923/30570639/30570639_320.mp4?streamauth=1746694441_0df4b179142bf2c4a1a6d21327937e40" }
         ],
