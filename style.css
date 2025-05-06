@@ -293,8 +293,8 @@ body {
 
 @media (max-width: 480px) {
   #album-art-container {
-    width: 200px;
-    height: 300px;
+    width: 180px;
+    height: 320px;
   }
   
   #song-title {
