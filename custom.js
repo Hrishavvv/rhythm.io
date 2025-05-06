@@ -1,12 +1,24 @@
+// Custom Support for other songs...
+
 window.customSongs = [
     {
         name: "Tere Naina",
         artists: { primary: [{ name: "Shafqat Amanat Ali" }] },
         downloadUrl: [
-            { quality: "160kbps", url: "https://raag.fm/files/mp3/128/Hindi/1446135/Tere%20Naina%20(My%20Name%20Is%20Khan)%20-%20(Raag.Fm).mp3" }
+            { quality: "320kbps", url: "https://streams.gaana.com/songs/98/4242298/36670428/36670428_320.mp4?streamauth=1746686377_c79678955e1d58e012f1ef73072a0172" }
         ],
         image: [
             { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/DwPKOkBKqV/PKOxQAGa3q/size_l.webp" }
+        ]
+    },
+    {
+        name: "Tere Mast Mast Do Nain",
+        artists: { primary: [{ name: "Rahat Fateh Ali Khan" }] },
+        downloadUrl: [
+            { quality: "320kbps", url: "https://streams.gaana.com/songs/83/183/1581/1581_320.mp4?streamauth=1746686459_bb0fd26020eb490464175082cfbfe667" }
+        ],
+        image: [
+            { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/YoEWlwa3zX/YoEWlAmbzX/size_l.jpg" }
         ]
     },
     {
