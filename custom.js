@@ -50,6 +50,16 @@ window.customSongs = [
         image: [
             { quality: "500x500", url: "https://c.saavncdn.com/077/After-Hours-English-2020-20240207070330-500x500.jpg" }
         ]
+    },
+    {
+        name: "Unravel",
+        artists: { primary: [{ name: "TK from ling tosite sigure" }] },
+        downloadUrl: [
+            { quality: "320kbps", url: "https://streams.gaana.com/songs/23/3223923/30570639/30570639_320.mp4?streamauth=1746694441_0df4b179142bf2c4a1a6d21327937e40" }
+        ],
+        image: [
+            { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/kGxbn03y4r/xbnww78lKy/size_l.webp" }
+        ]
     }
 
     
