@@ -86,24 +86,23 @@ body {
 
 #content-container {
   display: flex;
-  flex-direction: row;
+  height: calc(100% - 120px);
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 30px;
-  height: calc(100% - 100px);
+  gap: 50px;
+  padding: 20px;
 }
 
 #song-info {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
 }
 
 #album-art-container {
-  width: 320px;
-  height: 320px;
-  min-width: 320px;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
 }
 
 #album-art {
@@ -119,9 +118,9 @@ body {
 }
 
 #song-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 #song-artist {
@@ -138,13 +137,13 @@ body {
 }
 
 #progress-container {
-  width: 95%;
-  margin-bottom: 8px;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 #progress-bar {
   width: 100%;
-  height: 4px;
+  height: 6px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   position: relative;
@@ -267,8 +266,7 @@ body {
   #content-container {
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    padding: 15px;
+    gap: 30px;
     height: auto;
   }
   
@@ -279,10 +277,8 @@ body {
   }
   
   #album-art-container {
-    width: 70vw;
-    height: 70vw;
-    min-width: 200px;
-    min-height: 200px;
+    width: 250px;
+    height: 250px;
   }
   
   #song-details {
@@ -293,33 +289,12 @@ body {
     width: 90%;
     max-width: 400px;
   }
-  
-  #progress-container {
-    width: 95%;
-    margin-bottom: 8px;
-  }
-  
-  #progress-bar {
-    height: 4px;
-  }
-  
-  #controls button {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  #play-pause-btn {
-    padding: 14px;
-    transform: scale(1.2);
-  }
 }
 
 @media (max-width: 480px) {
   #album-art-container {
-    width: 65vw;
-    height: 65vw;
-    min-width: 180px;
-    min-height: 180px;
+    width: 180px;
+    height: 320px;
   }
   
   #song-title {
@@ -331,27 +306,22 @@ body {
   }
   
   #controls button {
-    padding: 8px;
-    font-size: 14px;
-  }
-  
-  #play-pause-btn {
     padding: 12px;
-    transform: scale(1.2);
+    font-size: 18px;
   }
   
   #search-bar {
-    width: 95%;
-    padding: 5px;
-    margin: 10px auto;
+    padding: 3px;
+    width: 90%;
+    margin: 15px auto;
   }
   
   #search-input {
-    font-size: 12px;
-    padding: 6px;
+    font-size: 13px;
+    padding: 8px;
   }
   
   #search-btn {
-    padding: 6px;
+    padding: 8px;
   }
 }
