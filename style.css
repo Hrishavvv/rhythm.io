@@ -310,17 +310,21 @@ body {
     font-size: 16px;
   }
   
+  #progress-container {
+    width: 105%;
+  }
+  
   #progress-bar {
     height: 8px;
   }
   
   #controls button {
-    padding: 14px;
-    font-size: 22px;
+    padding: 12px;
+    font-size: 21px;
   }
   
   #play-pause-btn {
-    padding: 20px;
+    padding: 16px;
   }
   
   #search-bar {
