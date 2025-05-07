@@ -60,6 +60,16 @@ window.customSongs = [
         image: [
             { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/kGxbn03y4r/xbnww78lKy/size_l.webp" }
         ]
+    },
+    {
+        name: "Despacito",
+        artists: { primary: [{ name: "Luis Fonsi" }] },
+        downloadUrl: [
+            { quality: "320kbps", url: "https://streams.gaana.com/songs/36/1867736/21350146/21350146_320.mp4?streamauth=1746778174_4dd5cfd7b834454e8cd3cc12fe5b0b72" }
+        ],
+        image: [
+            { quality: "500x500", url: "https://a10.gaanacdn.com/gn_img/albums/R7vKX66Wmr/7vKXyp9V3m/size_xl.jpg" }
+        ]
     }
 
     
