@@ -311,7 +311,7 @@ body {
   }
   
   #progress-container {
-    width: 110%;
+    width: 115%;
   }
   
   #progress-bar {
@@ -319,7 +319,7 @@ body {
   }
   
   #controls button {
-    padding: 12px;
+    padding: 16px;
     font-size: 21px;
   }
   
